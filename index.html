@@ -28,6 +28,20 @@
       backdrop-filter: blur(10px);
       text-align: center;
     }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    .hero img {
+      max-width: 220px;
+    }
     h1 {
       font-size: 2.8rem;
       color: #4af626;
@@ -58,7 +72,9 @@
       margin-top: 2.5rem;
     }
     .button {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       margin-top: 1.5rem;
       padding: 0.75rem 1.8rem;
       background-color: #4af626;
@@ -68,6 +84,9 @@
       text-decoration: none;
       font-size: 1rem;
       transition: all 0.3s ease;
+    }
+    .button img {
+      height: 30px;
     }
     .button:hover {
       background-color: #38c91c;
@@ -105,73 +124,24 @@
       color: #888;
       margin: 0 0.5rem;
     }
-    .mascot-img {
-      max-width: 220px;
-      margin-bottom: 1rem;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="assets/foxit5.png" alt="Renard longue-vue" class="mascot-img">
-    <h1>Whoami Recon</h1>
-    <p><em>Audit OSINT Web – Cartographie de votre exposition numérique</em></p>
-
-    <div class="section">
-      <h2><i class="fas fa-toolbox icon"></i> Services proposés</h2>
-      <img src="assets/foxit.png" alt="Renard au bureau" class="mascot-img">
-      <table>
-        <thead>
-          <tr>
-            <th>Service</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Analyse DNS</td>
-            <td>Examen des enregistrements publics (A, MX, TXT, SPF, etc.)</td>
-          </tr>
-          <tr>
-            <td>WHOIS & sous-domaines</td>
-            <td>Collecte des données WHOIS et identification de sous-domaines</td>
-          </tr>
-          <tr>
-            <td>Technos exposées</td>
-            <td>Détection CMS, serveurs, JS/API publiques (Wappalyzer-like)</td>
-          </tr>
-          <tr>
-            <td>Fichiers indexés</td>
-            <td>robots.txt, sitemap.xml, Google Dorks</td>
-          </tr>
-          <tr>
-            <td>Conseils techniques</td>
-            <td>Mesures simples pour réduire la surface d’exposition</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-radar icon"></i> Méthodologie</h2>
-      <img src="assets/foxit3.png" alt="Renard radar" class="mascot-img">
-      <p>Chaque mission suit une approche discrète, structurée et ciblée. Notre renard OSINT ne laisse rien passer.</p>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-envelope icon"></i> Contact</h2>
-      <img src="assets/foxit2.png" alt="Renard qui salue" class="mascot-img">
-      <p><i class="fas fa-paper-plane icon"></i>Email pro : <a href="mailto:contact@tondomaine.fr">contact@tondomaine.fr</a></p>
-      <p><i class="fab fa-github icon"></i>GitHub : <a href="https://github.com/tonprofil">github.com/tonprofil</a></p>
-    </div>
-
-    <div class="section">
-      <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag icon"></i>Demander un audit</a>
+    <div class="hero">
+      <img src="assets/Foxit.png" alt="Renard au bureau">
+      <div class="hero-text">
+        <h1>Whoami Recon</h1>
+        <p><em>Audit OSINT Web – Cartographie de votre exposition numérique</em></p>
+        <a class="button" href="mailto:contact@tondomaine.fr">
+          <i class="fas fa-flag"></i> Demander un audit
+          <img src="assets/Foxit5.png" alt="Renard longue-vue">
+        </a>
+      </div>
     </div>
   </div>
 
   <footer>
-    <img src="assets/foxit1.png" alt="Renard page 404" class="mascot-img">
     © 2024 Whoami Recon · <a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a> · <a href="#">CGV</a>
   </footer>
 </body>
