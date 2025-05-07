@@ -19,7 +19,7 @@
       justify-content: space-between;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 3rem auto;
       padding: 3rem;
       background-color: rgba(30, 30, 30, 0.95);
@@ -78,6 +78,23 @@
       margin-right: 8px;
       color: #4af6c6;
     }
+    table {
+      width: 100%;
+      margin-top: 1.5rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #3a3a3a;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+      color: #f6a726;
+    }
+    td {
+      background-color: #1c1c1c;
+    }
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -108,7 +125,36 @@
 
     <div class="section">
       <h2><i class="fas fa-toolbox icon"></i> Services proposés</h2>
-      <p>Analyse passive de votre nom de domaine, DNS, certificats SSL, sous-domaines, technologies exposées, documents indexés et plus.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Analyse DNS</td>
+            <td>Examen des enregistrements publics (A, MX, TXT, SPF, etc.)</td>
+          </tr>
+          <tr>
+            <td>WHOIS & sous-domaines</td>
+            <td>Collecte des données WHOIS et identification de sous-domaines</td>
+          </tr>
+          <tr>
+            <td>Technos exposées</td>
+            <td>Détection CMS, serveurs, JS/API publiques (Wappalyzer-like)</td>
+          </tr>
+          <tr>
+            <td>Fichiers indexés</td>
+            <td>robots.txt, sitemap.xml, Google Dorks</td>
+          </tr>
+          <tr>
+            <td>Conseils techniques</td>
+            <td>Mesures simples pour réduire la surface d’exposition</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="section">
@@ -126,7 +172,7 @@
       <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag icon"></i>Demander un audit</a>
     </div>
   </div>
-  
+
   <footer>
     © 2024 Whoami Recon · <a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a> · <a href="#">CGV</a>
   </footer>
