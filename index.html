@@ -9,21 +9,25 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #121212;
+      background: radial-gradient(circle at top left, #1a1a1a, #0e0e0e);
       color: #e0e0e0;
       font-family: 'Inter', sans-serif;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
     }
     .container {
-      max-width: 700px;
-      padding: 2rem;
+      max-width: 800px;
+      padding: 3rem;
+      background-color: rgba(30, 30, 30, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 100, 0.1);
+      backdrop-filter: blur(10px);
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #4af626;
       margin-bottom: 0.5rem;
     }
@@ -32,8 +36,8 @@
       color: #f6a726;
     }
     p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
     a {
       color: #4af6c6;
@@ -43,26 +47,45 @@
       text-decoration: underline;
     }
     .section {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
     .button {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.8rem;
       background-color: #4af626;
       color: #121212;
       font-weight: bold;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
-      transition: background 0.3s;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
     .button:hover {
       background-color: #38c91c;
+      transform: scale(1.05);
+    }
+    .ascii {
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+      white-space: pre;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="ascii">
+<pre>
+  __        __   _                            _               
+  \ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___         
+   \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \ 
+    \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |
+     \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/
+</pre>
+    </div>
+
     <h1>Whoami Recon</h1>
     <p><em>Audit OSINT Web – Cartographie de votre exposition numérique</em></p>
 
