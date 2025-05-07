@@ -3,78 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whoami Recon</title>
+  <title>Whoami Recon – Audit OSINT Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0e0e0e;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
       color: #e0e0e0;
-      font-family: Consolas, monospace;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
       padding: 2rem;
     }
     h1 {
-      color: #4af626;
       font-size: 2.5rem;
+      color: #4af626;
       margin-bottom: 0.5rem;
     }
     h2 {
+      font-size: 1.5rem;
       color: #f6a726;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
     a {
       color: #4af6c6;
       text-decoration: none;
     }
-    .section {
-      margin-bottom: 2rem;
+    a:hover {
+      text-decoration: underline;
     }
-    .ascii {
-      font-family: monospace;
-      white-space: pre;
-      color: #666;
+    .section {
+      margin-top: 2rem;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #4af626;
+      color: #121212;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #38c91c;
     }
   </style>
 </head>
 <body>
-  <div class="ascii">
-    <pre>
-      ___ _                 _       _             
-     | __| |___ _ __  _ __| |___  | |__ _  _ ___ 
-     | _|| / -_) '  \| '_ \ / _ \ | '_ \ || (_-<
-     |___|_\___|_|_|_| .__/_\___/ |_.__/\_,_/__/
-                      |_|                       
-    </pre>
-  </div>
+  <div class="container">
+    <h1>Whoami Recon</h1>
+    <p><em>Audit OSINT Web – Cartographie de votre exposition numérique</em></p>
 
-  <h1>Whoami Recon</h1>
-  <p><em>Audit OSINT Web – Analyse de surface numérique</em></p>
+    <div class="section">
+      <h2>📌 Services proposés</h2>
+      <p>Analyse passive de votre nom de domaine, DNS, certificats SSL, sous-domaines, technologies exposées, documents indexés et plus.</p>
+    </div>
 
-  <div class="section">
-    <h2>📌 Services</h2>
-    <ul>
-      <li>Audit OSINT passif (DNS, WHOIS, sous-domaines, leaks)</li>
-      <li>Recommandations techniques & stratégiques</li>
-      <li>Rapports anonymisés pour sensibilisation</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>📄 Rapport anonymisé</h2>
+      <p><a href="/audit-exemple.pdf" target="_blank">Télécharger un exemple de rapport (PDF)</a></p>
+    </div>
 
-  <div class="section">
-    <h2>🧰 Exemple d'audit</h2>
-    <p><a href="/audit-exemple.pdf">Télécharger un rapport anonymisé (PDF)</a></p>
-  </div>
+    <div class="section">
+      <h2>📬 Contact</h2>
+      <p>Email pro : <a href="mailto:contact@tondomaine.fr">contact@tondomaine.fr</a></p>
+      <p>GitHub : <a href="https://github.com/tonprofil">github.com/tonprofil</a></p>
+    </div>
 
-  <div class="section">
-    <h2>💬 Me contacter</h2>
-    <p>Email : <a href="mailto:contact@tondomaine.fr">contact@tondomaine.fr</a></p>
-    <p>PGP : <a href="/pgp.txt">/pgp.txt</a></p>
-  </div>
-
-  <div class="section">
-    <h2>🔗 Réseaux</h2>
-    <ul>
-      <li><a href="https://github.com/tonprofil">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/tonprofil">LinkedIn</a></li>
-    </ul>
+    <div class="section">
+      <a class="button" href="mailto:contact@tondomaine.fr">Demander un audit</a>
+    </div>
   </div>
 </body>
 </html>
-
