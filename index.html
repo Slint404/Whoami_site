@@ -42,9 +42,8 @@
       color: #3e9448;
     }
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
+      width: 100%;
+      padding: 2rem 4rem;
     }
     .hero {
       text-align: center;
@@ -76,7 +75,7 @@
     .cta {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 1rem;
       margin-top: 2.5rem;
     }
@@ -109,11 +108,6 @@
       color: #888;
       margin: 0 0.5rem;
     }
-    
-    
-      50% { box-shadow: 0 0 30px rgba(62, 148, 72, 0.4); }
-      100% { box-shadow: 0 0 0px rgba(62, 148, 72, 0.2); }
-    }
   </style>
 </head>
 <body>
@@ -125,30 +119,28 @@
   </header>
 
   <div class="container">
-  <div style="display: flex; align-items: flex-start; gap: 2rem;">
-    <div style="flex-shrink: 0;">
-      <img src="assets/Foxit.png" alt="Foxit Dev" style="width: 420px; filter: drop-shadow(0 0 100px rgba(62, 148, 72, 0.8));">
+    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+      <div style="flex-shrink: 0;">
+        <img src="assets/Foxit.png" alt="Foxit Dev" style="width: 420px; filter: drop-shadow(0 0 100px rgba(62, 148, 72, 0.8));">
+      </div>
+      <div style="flex: 1; max-width: 800px;">
+        <section class="section" style="text-align: left;">
+          <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
+          <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
+          <ul style="text-align: left;">
+            <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
+            <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
+            <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
+            <li><strong>Empreinte numérique :</strong> éléments visibles en ligne (emails, leaks, mentions, outils tiers)</li>
+            <li><strong>Préconisations adaptées :</strong> recommandations simples et efficaces</li>
+          </ul>
+          <div class="cta">
+            <img src="assets/Foxit6.png" alt="Foxit qui pointe">
+            <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag"></i> Demander un audit</a>
+          </div>
+        </section>
+      </div>
     </div>
-    <div style="flex: 1; padding-left: 2rem; padding-right: 3rem;">
-      <section class="section" style="text-align: left;">
-        <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
-        <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
-        <ul style="text-align: left;">
-          <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
-          <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
-          <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
-          <li><strong>Empreinte numérique :</strong> éléments visibles en ligne (emails, leaks, mentions, outils tiers)</li>
-          <li><strong>Préconisations adaptées :</strong> recommandations simples et efficaces</li>
-        </ul>
-        <div class="cta" style="justify-content: flex-start;">
-          <img src="assets/Foxit6.png" alt="Foxit qui pointe">
-          <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag"></i> Demander un audit</a>
-        </div>
-      </section>
-    </div>
-  </div>
-
-  
   </div>
 
   <footer>
