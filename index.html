@@ -109,6 +109,17 @@
       color: #888;
       margin: 0 0.5rem;
     }
+    .foxit-glow {
+      animation: glowPulse 4s ease-in-out infinite;
+      background: radial-gradient(circle at top left, rgba(62, 148, 72, 0.35), transparent 70%);
+      padding: 1rem;
+      border-radius: 12px;
+    }
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 0px rgba(62, 148, 72, 0.2); }
+      50% { box-shadow: 0 0 30px rgba(62, 148, 72, 0.4); }
+      100% { box-shadow: 0 0 0px rgba(62, 148, 72, 0.2); }
+    }
   </style>
 </head>
 <body>
@@ -120,8 +131,8 @@
   </header>
 
   <div class="container">
-    <div style="text-align: center; margin-top: 3rem;">
-      <img src="assets/Foxit.png" alt="Foxit Dev" style="max-width: 200px;">
+    <div class="foxit-glow" style="display: flex; justify-content: flex-start; margin-top: 3rem;">
+      <img src="assets/Foxit.png" alt="Foxit Dev" style="max-width: 250px;">
     </div>
     <section class="hero">
       <p><em>Audit OSINT Web – Cartographie de votre exposition numérique.</em></p>
