@@ -108,6 +108,22 @@
       color: #888;
       margin: 0 0.5rem;
     }
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .foxit {
+      flex: 0 0 auto;
+      margin-right: 3rem;
+    }
+    .foxit img {
+      width: 440px;
+      filter: drop-shadow(0 0 130px rgba(62, 148, 72, 0.9));
+    }
+    .solution {
+      flex: 1;
+    }
   </style>
 </head>
 <body>
@@ -119,15 +135,15 @@
   </header>
 
   <div class="container">
-    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
-      <div style="flex-shrink: 0;">
-        <img src="assets/Foxit.png" alt="Foxit Dev" style="width: 420px; filter: drop-shadow(0 0 100px rgba(62, 148, 72, 0.8));">
+    <div class="content-wrapper">
+      <div class="foxit">
+        <img src="assets/Foxit.png" alt="Foxit Dev">
       </div>
-      <div style="flex: 1; max-width: 800px;">
-        <section class="section" style="text-align: left;">
+      <div class="solution">
+        <section class="section">
           <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
           <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
-          <ul style="text-align: left;">
+          <ul>
             <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
             <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
             <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
