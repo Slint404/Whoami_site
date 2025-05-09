@@ -111,25 +111,14 @@
       margin: 0 0.5rem;
     }
     .content-wrapper {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      gap: 3rem;
-    }
-    .foxit {
-      flex: 0 0 auto;
+      gap: 2rem;
     }
     .foxit img {
       width: 440px;
       filter: drop-shadow(0 0 130px rgba(62, 148, 72, 0.9));
-    }
-    .foxit-left {
-      margin-right: auto;
-      margin-left: calc((100vw - 1280px) / 2);
-    }
-    .foxit-right {
-      margin-left: auto;
-      margin-right: calc((100vw - 1280px) / 2);
     }
     .solution {
       max-width: 600px;
@@ -147,7 +136,7 @@
 
   <div class="container">
     <div class="content-wrapper">
-      <div class="foxit foxit-left">
+      <div class="foxit">
         <img src="assets/Foxit.png" alt="Foxit Dev">
       </div>
       <div class="solution">
@@ -167,7 +156,7 @@
           </div>
         </section>
       </div>
-      <div class="foxit foxit-right">
+      <div class="foxit">
         <img src="assets/Foxit30.png" alt="Foxit opposé">
       </div>
     </div>
