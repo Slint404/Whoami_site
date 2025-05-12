@@ -12,11 +12,8 @@
       color-scheme: dark;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
       background: #0e0e0e;
@@ -24,6 +21,19 @@
       font-family: 'Rajdhani', sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     header {
@@ -89,7 +99,7 @@
     }
 
     .foxit {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     .foxit img {
@@ -97,12 +107,14 @@
       max-width: 440px;
       height: auto;
       filter: drop-shadow(0 0 130px rgba(62, 148, 72, 0.9));
-      border-radius: 10px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
     }
 
     .foxit:hover {
       transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(62, 148, 72, 0.6);
+      filter: brightness(1.2);
     }
 
     .solution {
@@ -184,7 +196,6 @@
       color: #888;
       text-align: center;
       padding: 2rem 1rem 1rem;
-      margin-top: 4rem;
       font-size: 0.9rem;
     }
 
@@ -240,33 +251,35 @@
     </nav>
   </header>
 
-  <div class="container">
-    <div class="content-wrapper">
-      <div class="foxit">
-        <img src="assets/Foxit.png" alt="Foxit Dev" />
-      </div>
-      <div class="solution" id="solutions">
-        <section class="section">
-          <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
-          <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
-          <ul>
-            <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
-            <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
-            <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
-            <li><strong>Empreinte numérique :</strong> éléments visibles en ligne (emails, leaks, mentions, outils tiers)</li>
-            <li><strong>Préconisations adaptées :</strong> recommandations simples et efficaces</li>
-          </ul>
-          <div class="cta">
-            <img src="assets/Foxit6.png" alt="Foxit qui pointe" />
-            <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag"></i> Demander un audit</a>
-          </div>
-        </section>
-      </div>
-      <div class="foxit">
-        <img src="assets/Foxit30.png" alt="Foxit opposé" />
+  <main>
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="foxit">
+          <img src="assets/Foxit.png" alt="Foxit Dev" />
+        </div>
+        <div class="solution" id="solutions">
+          <section class="section">
+            <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
+            <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
+            <ul>
+              <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
+              <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
+              <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
+              <li><strong>Empreinte numérique :</strong> éléments visibles en ligne (emails, leaks, mentions, outils tiers)</li>
+              <li><strong>Préconisations adaptées :</strong> recommandations simples et efficaces</li>
+            </ul>
+            <div class="cta">
+              <img src="assets/Foxit6.png" alt="Foxit qui pointe" />
+              <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag"></i> Demander un audit</a>
+            </div>
+          </section>
+        </div>
+        <div class="foxit">
+          <img src="assets/Foxit30.png" alt="Foxit opposé" />
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <footer>
     © 2024 Whoami Recon · 
