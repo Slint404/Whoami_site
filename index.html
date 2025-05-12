@@ -8,10 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="assets/Logo.png" type="image/png" />
   <style>
-    :root {
-      color-scheme: dark;
-    }
-
+    :root { color-scheme: dark; }
     html, body {
       height: 100%;
       margin: 0;
@@ -22,19 +19,9 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    body { display: flex; flex-direction: column; }
+    main { flex: 1; }
+    html { scroll-behavior: smooth; }
 
     header {
       position: sticky;
@@ -49,10 +36,11 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
 
-    .logo {
+    .logo a {
       display: flex;
       align-items: center;
       gap: 1rem;
+      text-decoration: none;
     }
 
     .logo img {
@@ -64,13 +52,8 @@
       margin: 0;
     }
 
-    .logo span:first-child {
-      color: white;
-    }
-
-    .logo span:last-child {
-      color: #3e9448;
-    }
+    .logo span:first-child { color: white; }
+    .logo span:last-child { color: #3e9448; }
 
     nav a {
       color: #e0e0e0;
@@ -80,9 +63,7 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #3e9448;
-    }
+    nav a:hover { color: #3e9448; }
 
     .container {
       width: 100%;
@@ -126,15 +107,9 @@
       animation-delay: 0.3s;
     }
 
-    .section {
-      margin-top: 4rem;
-      text-align: left;
-    }
+    .section { margin-top: 4rem; text-align: left; }
 
-    .section h2 {
-      color: #3e9448;
-      margin-bottom: 1rem;
-    }
+    .section h2 { color: #3e9448; margin-bottom: 1rem; }
 
     ul {
       list-style: none;
@@ -147,9 +122,7 @@
       margin-right: 0.5rem;
     }
 
-    ul li {
-      margin-bottom: 0.75rem;
-    }
+    ul li { margin-bottom: 0.75rem; }
 
     .cta {
       display: flex;
@@ -212,9 +185,7 @@
     }
 
     @media (max-width: 1024px) {
-      .container {
-        padding: 2rem;
-      }
+      .container { padding: 2rem; }
     }
 
     @media (max-width: 768px) {
@@ -224,26 +195,19 @@
         gap: 1rem;
       }
 
-      nav {
-        margin-top: 0.5rem;
-      }
-
-      .content-wrapper {
-        flex-direction: column;
-      }
-
-      .cta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      nav { margin-top: 0.5rem; }
+      .content-wrapper { flex-direction: column; }
+      .cta { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="assets/Logo.png" alt="Logo CLI" />
-      <h1><span>WHOAMI</span> <span>RECON</span></h1>
+      <a href="index.html">
+        <img src="assets/Logo.png" alt="Logo CLI" />
+        <h1><span>WHOAMI</span> <span>RECON</span></h1>
+      </a>
     </div>
     <nav>
       <a href="#solutions">Solutions</a>
@@ -265,7 +229,7 @@
               <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
               <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
               <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
-              <li><strong>Empreinte numérique :</strong> éléments visibles en ligne (emails, leaks, mentions, outils tiers)</li>
+              <li><strong>Empreinte numérique :</strong> emails, leaks, mentions, outils tiers</li>
               <li><strong>Préconisations adaptées :</strong> recommandations simples et efficaces</li>
             </ul>
             <div class="cta">
