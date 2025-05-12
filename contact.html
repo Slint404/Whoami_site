@@ -47,7 +47,7 @@
 
     .logo a {
       display: flex;
-      align-items: center; /* ✅ corrigé ici */
+      align-items: center;
       gap: 1rem;
       text-decoration: none;
     }
@@ -85,7 +85,7 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
-      text-align: left;
+      text-align: center;
     }
 
     .section h2 {
@@ -125,17 +125,32 @@
       box-shadow: 0 0 15px rgba(62, 148, 72, 0.5);
     }
 
-    .success-message {
+    .success-block {
       display: none;
-      margin-top: 1.5rem;
-      color: #3e9448;
-      font-weight: bold;
-      text-align: center;
-      animation: fadeUp 0.8s ease forwards;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
-    @keyframes fadeUp {
-      to {
+    .success-block img {
+      width: 200px;
+      max-width: 100%;
+      filter: drop-shadow(0 0 20px rgba(62, 148, 72, 0.4));
+    }
+
+    .success-block p {
+      color: #3e9448;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
         opacity: 1;
         transform: translateY(0);
       }
@@ -191,8 +206,10 @@
           <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
           <button type="submit">Envoyer</button>
         </form>
-        <div class="success-message" id="successMessage">
-          ✅ Merci, votre message a bien été envoyé.
+
+        <div class="success-block" id="successBlock">
+          <img src="assets/foxitmail.png" alt="Foxit a bien envoyé le mail !" />
+          <p>✅ Merci ! Votre message a bien été envoyé.<br>Foxit s’en occupe 🦊</p>
         </div>
       </section>
     </div>
@@ -221,7 +238,8 @@
       }).then(response => {
         if (response.ok) {
           form.reset();
-          document.getElementById("successMessage").style.display = "block";
+          form.style.display = "none";
+          document.getElementById("successBlock").style.display = "flex";
         } else {
           alert("Une erreur s'est produite. Veuillez réessayer.");
         }
