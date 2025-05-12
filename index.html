@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,21 +8,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="assets/Logo.png" type="image/png" />
   <style>
-    body {
+    :root {
+      color-scheme: dark;
+    }
+
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
       background: #0e0e0e;
       color: #e0e0e0;
       font-family: 'Rajdhani', sans-serif;
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
-      background-color: #121212;
+      background-color: #121212e6;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
 
     .logo {
@@ -49,9 +72,22 @@
       color: #3e9448;
     }
 
+    nav a {
+      color: #e0e0e0;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3e9448;
+    }
+
     .container {
       width: 100%;
       padding: 2rem 4rem;
+      box-sizing: border-box;
     }
 
     .content-wrapper {
@@ -62,14 +98,37 @@
       gap: 2rem;
     }
 
+    .foxit {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
     .foxit img {
       width: 100%;
       max-width: 440px;
+      height: auto;
       filter: drop-shadow(0 0 130px rgba(62, 148, 72, 0.9));
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+
+    .foxit:hover {
+      transform: scale(1.02);
+      filter: brightness(1.2);
     }
 
     .solution {
       max-width: 600px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .section {
+      margin-top: 4rem;
+      text-align: left;
     }
 
     .section h2 {
@@ -88,15 +147,30 @@
       margin-right: 0.5rem;
     }
 
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
     .cta {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 0.6s;
     }
 
     .cta img {
       height: 75px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .cta img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2) drop-shadow(0 0 10px #3e9448aa);
     }
 
     .button {
@@ -108,10 +182,13 @@
       color: #121212;
       border-radius: 8px;
       text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 0 transparent;
     }
 
     .button:hover {
       background-color: #2e6f35;
+      box-shadow: 0 0 15px rgba(62, 148, 72, 0.5);
     }
 
     footer {
@@ -119,8 +196,46 @@
       color: #888;
       text-align: center;
       padding: 2rem 1rem 1rem;
-      margin-top: 4rem;
       font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #888;
+      margin: 0 0.5rem;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -130,38 +245,47 @@
       <img src="assets/Logo.png" alt="Logo CLI" />
       <h1><span>WHOAMI</span> <span>RECON</span></h1>
     </div>
+    <nav>
+      <a href="#solutions">Solutions</a>
+      <a href="mailto:contact@tondomaine.fr">Contact</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <div class="content-wrapper">
-      <div class="foxit">
-        <img src="assets/Foxit.png" alt="Foxit Dev" />
-      </div>
-      <div class="solution">
-        <section class="section">
-          <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
-          <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
-          <ul>
-            <li><strong>Analyse de présence :</strong> infos publiques liées à votre domaine</li>
-            <li><strong>Cartographie numérique :</strong> sous-domaines, services exposés</li>
-            <li><strong>Veille d’indexation :</strong> sitemap, pages indexées, erreurs</li>
-            <li><strong>Empreinte numérique :</strong> emails, leaks, mentions</li>
-            <li><strong>Préconisations :</strong> recommandations simples et efficaces</li>
-          </ul>
-          <div class="cta">
-            <img src="assets/Foxit6.png" alt="Foxit qui pointe" />
-            <a class="button" href="contact.html"><i class="fas fa-flag"></i> Demander un audit</a>
-          </div>
-        </section>
-      </div>
-      <div class="foxit">
-        <img src="assets/Foxit30.png" alt="Foxit opposé" />
+  <main>
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="foxit">
+          <img src="assets/Foxit.png" alt="Foxit Dev" />
+        </div>
+        <div class="solution" id="solutions">
+          <section class="section">
+            <h2><i class="fas fa-search icon"></i> Nos solutions OSINT Web</h2>
+            <p><strong>Nous analysons votre empreinte numérique publique sans interaction directe.</strong></p>
+            <ul>
+              <li><strong>Analyse de présence :</strong> identification des infos publiques liées à votre domaine</li>
+              <li><strong>Cartographie numérique :</strong> sous-domaines, services accessibles, signaux exposés</li>
+              <li><strong>Veille d’indexation :</strong> robots.txt, sitemap, pages indexées, erreurs de publication</li>
+              <li><strong>Empreinte numérique :</strong> éléments visibles en ligne (emails, leaks, mentions, outils tiers)</li>
+              <li><strong>Préconisations adaptées :</strong> recommandations simples et efficaces</li>
+            </ul>
+            <div class="cta">
+              <img src="assets/Foxit6.png" alt="Foxit qui pointe" />
+              <a class="button" href="mailto:contact@tondomaine.fr"><i class="fas fa-flag"></i> Demander un audit</a>
+            </div>
+          </section>
+        </div>
+        <div class="foxit">
+          <img src="assets/Foxit30.png" alt="Foxit opposé" />
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <footer>
-    © 2024 Whoami Recon · Mentions légales · Politique de confidentialité · CGV
+    © 2024 Whoami Recon · 
+    <a href="#">Mentions légales</a> · 
+    <a href="#">Politique de confidentialité</a> · 
+    <a href="#">CGV</a>
   </footer>
 </body>
 </html>
